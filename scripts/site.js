@@ -2,6 +2,7 @@ const TAB_LOGIN = '.tab-login';
 const TAB_PASSWORD = '.tab-password';
 const TAB_REGISTER = '.tab-register';
 const TOAST_CLASS = '.toast';
+const TOAST_LOGIN = '.toastLogin';
 const VERIFYING = 'Verifying';
 const NEXT = 'Next';
 /*
@@ -21,6 +22,7 @@ $(document).ready(function () {
         $('#span_userrequired').hide();
         let userNameVal = $('#txt_Username').val();
         $(this).text(VERIFYING);
+        // simulate a call to server while verifying username
         setTimeout(function(){
             if (userNameVal)
             {
@@ -44,7 +46,7 @@ $(document).ready(function () {
                     $('#txt_Username').addClass('error');
             }
             $('#btnNext').text(NEXT);
-        }, 3000);
+        }, 2000);
     });
 
     $('#back').click(function () {
@@ -85,6 +87,7 @@ $(document).ready(function () {
             {
                 $('#span_invalidpassword').hide();
                 $('#txt_Password').removeClass('error');
+                $(TOAST_LOGIN).toast('show');
             }
         }else{
             $('#span_invalidpassword').show();
