@@ -1,0 +1,92 @@
+.container{
+    max-width: none;
+    margin-top:48px;
+    padding-left:30px;
+    padding-right:30px;
+    margin-bottom: 12px;
+}
+h4
+{
+    font-size:22px;
+    line-height:28px;
+    color:#000000;
+}
+
+h5{
+    font-size:16px;
+    line-height:22px;
+    color:#3c3c3c;
+}
+
+#txt_Username{
+    font-size:16px;
+    line-height:22px;
+    color: #3c3c3c;
+}
+
+#txt_Password{
+    height: 38px;
+    background: #ffffff;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+}
+
+.btn-block{
+    width:100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ffffff;
+}
+
+span{
+    font-size:14px;
+    line-height:20px;
+    color: #808080;
+}
+
+a{
+    font-size: 14px;
+    line-height: 20px;
+    color: #006eaf;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+footer{
+    text-align: center;
+    bottom:0;
+    position:fixed;
+    width:100%;
+}
+
+.tab {
+    display: none;
+  }
+
+.error{
+    border: 1px solid #ee4444 !important;
+}
+
+.errorSpan{
+    background: #dcdcdc;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.round {
+    border-radius: 50%;
+  }
+
+.errorSpanRegister{
+    font-size:14px;
+    line-height: 20px;
+    color: #666666;
+    background: #dcdcdc;
+    border: 1px solid #bbbbbb;
+    border-radius: 4px;
+    width: 100%;
+}

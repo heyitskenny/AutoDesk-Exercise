@@ -1,0 +1,241 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no">
+        <script defer src="scripts/jquery-3.4.1.min.js"></script>
+        <script defer src="scripts/bootstrap.min.js"></script>
+        <script defer src="scripts/site.js"></script>
+        <link rel="stylesheet" href="styles/bootstrap.min.css">
+        <link rel="stylesheet" href="styles/site.css">
+    </head>
+    <body>
+        <div class="container">
+            <section>
+                <div class="tab tab-login">
+                        <div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center" style="min-height: 200px; position: absolute; top:0; left:0; right:0;">
+
+                                
+                                <div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="5000" data-animation="true">
+                                  <div class="toast-body">
+                                    Account created successfully!
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="row" style="margin-bottom:24px;">
+                                <div class="col-md-12">
+                                        <h4>Sign in</h4>
+                                </div>
+                        </div>      
+                           
+                            <div class="row" style="margin-bottom:8px;">
+                                <div class="col-md-12">
+                                    <h5>Username</h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <input type="text" class="form-control" id="txt_Username" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div id="span_userrequired" class="errorSpan" style="display: none;">Username is required.</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="span_usernotfound" class="errorSpan" style="display: none;">The username is not recognized.</div>
+                                    </div>
+                            </div>
+                            <div class="row" style="margin-top:12px; margin-bottom:12px;">
+                                <div class="col-md-12">
+                                    <button type="button" id="btnNext" class="btn btn-primary btn-block">Next</button>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12" style="text-align: center;">
+                                    <span>New to Autodesk? </span>
+                                    <a href="#" id="createAccount">Create account</a>
+                                </div>
+                            </div>
+                </div>
+                <div class="tab tab-password">
+                        <div class="row" style="margin-bottom:24px; text-align: center;">
+                                
+                                <div class="col-md-12">
+                                        <a href="#" id="back" class="round" style="float:left; font-size: 60px; text-decoration: none;">&#8249;</a>
+                                            <h4>Welcome</h4>
+                                                
+                                        
+                                </div>
+                        </div>   
+                        <div class="row">
+                            <div class="col-md-12" style="text-align: center;">
+                                    <span id="userName"></span>
+                            </div>
+                            
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h5>Password</h5>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                    <input type="password" class="form-control" id="txt_Password" />
+                            </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-12">
+                                    <div id="span_invalidpassword" class="errorSpan" style="display: none;">Invalid password.</div>
+                                </div>
+                        </div>
+                        <div class="row" style="margin-top:12px; margin-bottom:12px;">
+                                <div class="col-md-12">
+                                        <button type="submit" id="btnLogin" class="btn btn-primary btn-block">Sign in</button>
+                                </div>
+                        </div>
+                </div>
+
+                <div class="tab tab-register">
+                    <div class="row">
+                        <div class="col-md-12" style="margin-bottom:24px;">
+                                <h4>Create account</h4>
+                        </div>
+                    </div>
+                    <div class="row" style="margin-bottom:16px;"> 
+                        <div class="col-md-6">
+                            <div class="row" style="margin-bottom: 8px;">
+                                <div class="col-md-12">
+                                        <span>First name</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                        <input type="text" class="form-control" id="txt_Firstname" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="span_invalidfirstname" class="errorSpanRegister" style="display: none;">Please enter your first name</div>
+                                    </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-6">
+                            <div class="row" style="margin-bottom: 8px;">
+                                <div class="col-md-12">
+                                        <span>Last name</span>
+                                </div>
+                                
+                            </div>
+                            <div class="row">
+                                    <div class="col-md-12">
+                                            <input type="text" class="form-control" id="txt_Lastname" />
+                                    </div>
+                            </div>
+                            <div class="row">
+                                    <div class="col-md-12">
+                                        <div id="span_invalidlastname" class="errorSpanRegister" style="display: none;">Please enter your last name</div>
+                                    </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                    
+                    <div class="row" style="margin-bottom:8px;">
+                            <div class="col-md-12">
+                                <span>Username</span>
+                            </div>
+                            
+                    </div>
+                    <div class="row" style="margin-bottom:16px;">
+                            <div class="col-md-12">
+                                    <input type="text" class="form-control" id="txt_UsernameCreate" />
+                                    <div class="row">
+                                            <div class="col-md-12">
+                                                <div id="span_invalidusernamecreate" class="errorSpanRegister" style="display: none;">Please enter a valid username</div>
+                                            </div>
+                                    </div>
+                            </div>
+                            
+                    </div>
+                    
+                    <div class="row" style="margin-bottom:8px;">
+                            <div class="col-md-12">
+                                <span>Re-type username</span>
+                            </div>
+                            
+                    </div>
+                    <div class="row" style="margin-bottom:16px;">
+                            <div class="col-md-12">
+                                <input type="text" class="form-control" id="txt_RetypeUsernameCreate" />
+                                <div class="row">
+                                        <div class="col-md-12">
+                                            <div id="span_invalidretypeusernamecreate" class="errorSpanRegister" style="display: none;">Please enter the same username</div>
+                                        </div>
+                                </div>
+                            </div>
+                            
+                    </div>
+                    <div class="row" style="margin-bottom:8px;">
+                            <div class="col-md-12">
+                                <span>Password</span>
+                            </div>
+                            
+                    </div>
+                    <div class="row" style="margin-bottom:16px;">
+                            <div class="col-md-12">
+                                <input type="password" class="form-control" id="txt_PasswordCreate" />
+                                <div class="row">
+                                        <div class="col-md-12">
+                                            <div id="span_invalidpasswordcreate" class="errorSpanRegister" style="display: none;">Please enter a password</div>
+                                        </div>
+                                </div>
+                            </div>
+                            
+                    </div>
+                    <div class="row" style="margin-bottom:8px;">
+                            <div class="col-md-12">
+                                <span>Re-type password</span>
+                            </div>
+                            
+                    </div>
+                    <div class="row" style="margin-bottom:16px;">
+                            <div class="col-md-12">
+                                <input type="password" class="form-control" id="txt_RetypePasswordCreate" />
+                                <div class="row">
+                                        <div class="col-md-12">
+                                            <div id="span_invalidretypepasswordcreate" class="errorSpanRegister" style="display: none;">Please enter the same password</div>
+                                        </div>
+                                </div>
+                            </div>
+                            
+                    </div>
+                    <div class="row" style="margin-bottom:16px;">
+                            <div class="col-md-12">
+                                <button type="button" id="btnCreateAccount" class="btn btn-primary btn-block">Create account</button>
+                            </div>
+                    </div>
+                    <div class="row">
+                            <div class="col-md-12" style="text-align: center;">
+                                <span>Already have an account? </span>
+                                <a href="#" id="signin">Sign in</a>
+                            </div>
+                    </div>
+                </div>
+                    
+            </section>
+            <footer>
+                <div>
+                        <span>Your account for everything Autodesk</span>
+                </div>
+                <div>
+                        <a href="#">Learn more</a>
+                </div>
+                
+            </footer>
+        </div>
+    </body>
+
+</html>
